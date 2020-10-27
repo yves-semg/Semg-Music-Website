@@ -1,14 +1,95 @@
 <!DOCTYPE html> <!--statement that infomrs the browser which version of html this document was written in, this is for html5-->
 <html>
      <title> semg</title>
-           <h1 style="font-size:70px;"><center>SEM-G MUSIC OFFICIAL WEBSITE </center></h1>
-           <h2 style="font-size:50px; color:blue"><center> Welcome to 'Afrobeats to the World' Music </center></h2>
-             <body>
+             <!--creating my first heading-->
+           <h1 style="font-size:40px; color:blue"><center> Welcome to 'Afrobeats to the World' Music </center></h1>
+             <!--creating a second designed heading using internal CSS style-->
+             <!--every element of h2 in the body will have this style-->
+           <style>
+             h2 {font-size:70px;color:white;background-color:black}
+           </style>
+
+         <body>
+               <h2><center>SEM-G MUSIC OFFICIAL WEBSITE </center></h2> <!--elements to be applied on the internal CSS above-->
+                 <!--adding my image to the page-->
                <figure>
-                   <center><img src="africanbeauty.jpg" width="600" height="400" ></center><!-- if the image is in another directory, you need to specify the directory-->
-                   <center><figcaption>2018:Performing African Beauty by Diamond Platnumz at UWC Mahindra College</figcaption></center><!--Adding caption to the picture-->
+                   <img src="africanbeauty.jpg" alt="missing" width="600" height="400" /><!-- if the image is in another directory, you need to specify the directory-->
+                   <figcaption>2018:Performing African Beauty by Diamond Platnumz at UWC Mahindra College.</figcaption><!--Adding caption to my picture-->
+                   <!--adding one-line paragraph with a blue background using in-line CSS style-->
+                 <p style="color:white;background-color:blue;font-size:40px;font-family:verdana">
+                   Music has always been special and essential to my life.
+                   <!--Adding another small paragraph-->
+                 </p>
                </figure>
-               <br><b>This is a website to help me develop and keep track of my prepararion journey to the music industry.</b>
-               <p style="color:blue">Music has always been an essential tool for me.</p> <!-- Using CSS to change the font -->
-             </body>
+
+                 <!--using CSS to align my image and the caption exactly under the image-->
+               <style>
+                 figure {
+                      display: inline-block;
+                      text-align: center;
+                      border: 0px dotted gray;
+                      margin: 2px; /* adjust as needed */
+                  }
+                figure img {
+                      vertical-align: top;
+                  }
+                figure figcaption {
+                      border: 1px dotted blue;
+                 }
+               </style>
+
+               <p>
+               <b>On this website, you'll navigate through my current music
+                 passion and where I want to head with this.
+               <br>The music industry is developing really quickly with the presence of the currentt technology.
+               <br>Lucky enough, I'm into both these two driving elements of the industry; Music and Technology(Computing).
+               </b>
+               </p>
+
+                 <!-- CREATING COLLAPSED TEXT-->
+               <button style="background-color:lightgray;font-size:20px;color:black;" type="button" class="collapsible"> <b>Little bit about me.</b></button>
+               <div class="content">
+                 <p> More about me to be posted here...  </p>
+               </div>
+                 <!--Styling the collapsible button using CSS-->
+               <style>
+               .collapsible{
+                 background-color: #eee;
+                 color: #444;
+                 cursor: pointer;
+                 padding: 18px;
+                 width: 100%;
+                 border: none;
+                 text-align: left;
+                 outline: none;
+                 font-size: 15px;
+                }
+               </style>
+                 <!--Styling the collapsed content-->
+               <style>
+               .content{
+                 padding: 0 18px;
+                 display: none;
+                 overflow: hidden;
+                 background-color: #f1f1f1;
+               }
+               </style>
+                 <!--Adding the JavaScript code for the button functionality-->
+              <script>
+                 var coll = document.getElementsByClassName("collapsible");
+                 var i;
+
+                 for (i = 0; i < coll.length; i++) {
+                    coll[i].addEventListener("click", function() {
+                    this.classList.toggle("active");
+                    var content = this.nextElementSibling;
+                     if (content.style.display === "block") {
+                        content.style.display = "none";
+                    } else {
+                        content.style.display = "block";
+                     }
+                     });
+                 }
+               </script>
+         </body>
 </html>
