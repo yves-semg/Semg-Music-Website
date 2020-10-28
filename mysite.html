@@ -3,17 +3,45 @@
      <title> semg</title>
              <!--creating my first heading-->
            <h1 style="font-size:40px; color:blue"><center> Welcome to 'Afrobeats to the World' Music </center></h1>
-             <!--creating a second designed heading using internal CSS style-->
-             <!--every element of h2 in the body will have this style-->
+
+         <body>
+           <h2><center>SEM-G MUSIC OFFICIAL WEBSITE </center></h2>
+           <!--styling header 2-->
            <style>
              h2 {font-size:70px;color:white;background-color:black}
            </style>
 
-         <body>
-               <h2><center>SEM-G MUSIC OFFICIAL WEBSITE </center></h2> <!--elements to be applied on the internal CSS above-->
+             <!--creating the navigation bar-->
+            <div id="wrapper">
+              <nav>
+               <ul class="menu"> <!--ul tag presents an unordered list usually ndered as ulleted list-->
+                 <li><a href="/home/">HOME</a> </li> <!--li is a tag of a list item, must be ntained in a parent ul or ol=ordered list-->
+                 <li><a href="/about/">ABOUT ME</a> </li>
+                 <li><a href="/music/">MY MUSIC</a> </li>
+                 <li><a href="/contact/">CONTACT</a> </li>
+               </ul>
+              </nav>
+             </div>
+
+                <!--styling the navigation bar-->
+            <style>
+              .menu {
+                background-color: lightgray;
+                text-align: center;
+              }
+              .menu a{
+                font-size: 20px;
+                text-decoration: none; /*to remove underline*/
+              }
+              .menu li{
+                display: inline;
+                padding: 60px;
+              }
+            </style>
+
                  <!--adding my image to the page-->
                <figure>
-                   <img src="africanbeauty.jpg" alt="missing" width="600" height="400" /><!-- if the image is in another directory, you need to specify the directory-->
+                   <img src="africanbeauty.jpg" alt="missing" width="400" height="250" /><!-- if the image is in another directory, you need to specify the directory-->
                    <figcaption>2018:Performing African Beauty by Diamond Platnumz at UWC Mahindra College.</figcaption><!--Adding caption to my picture-->
                    <!--adding one-line paragraph with a blue background using in-line CSS style-->
                  <p style="color:white;background-color:blue;font-size:40px;font-family:verdana">
@@ -50,12 +78,14 @@
                <button style="background-color:lightgray;font-size:20px;color:black;" type="button" class="collapsible"> <b>Little bit about me.</b></button>
                <div class="content">
                  <p> More about me to be posted here...  </p>
+
+                 <p> My priority passions are Coding, Dancing, Singing, Acting and overall Performing.</p>
                </div>
                  <!--Styling the collapsible button using CSS-->
                <style>
                .collapsible{
                  background-color: #eee;
-                 color: #444; 
+                 color: #444;
                  cursor: pointer;
                  padding: 18px;
                  width: 100%;
